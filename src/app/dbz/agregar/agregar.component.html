@@ -1,0 +1,26 @@
+    
+    
+    <h3>Agregar <small>{{ nuevo.nombre }}</small></h3>
+        <hr>
+        <form (ngSubmit)="agregar()">
+            <input 
+                type="text"
+                placeholder="Nombre"
+                name="nombre"
+                [(ngModel)]="nuevo.nombre"
+            />
+                <!-- los [] son para asignarle el valor de una propiedad, entre "" se le pone la ruta de la propiedad -->
+                <!-- [value]="nuevo.nombre" -->
+                <!-- Los () son para escruchar los eventos, dentro se pone el evento a escuchar -->
+                <!-- (input)="cambiarNombre( $event)" -->
+            <input 
+                type="text"
+                placeholder="Poder"
+                [value]="nuevo.poder"
+                name="poder" 
+                [(ngModel)]="nuevo.poder"
+            />
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
